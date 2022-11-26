@@ -1,6 +1,6 @@
 FROM steamcmd/steamcmd
 
-RUN steamcmd +login anonymous +force_install_dir /data +app_update 896660 +quit
+RUN steamcmd +login anonymous +force_install_dir /data +app_update 896660 -beta public-test -betapassword yesimadebackups +quit
 WORKDIR /data
 COPY start_server.sh start_dedicated_server.sh
 COPY adminlist.txt /root/.config/unity3d/IronGate/Valheim/adminlist.txt
